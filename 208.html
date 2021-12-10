@@ -6,7 +6,7 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 	<style>
-		#refresh_btn1{
+		#photo1{
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
 			margin-right:-4px;
@@ -29,7 +29,7 @@
 	</style>
 
 </head>
-<body bgcolor="black">
+<body>
 
 <!-- 예제 시작 -->
 
@@ -39,8 +39,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 
 <style type="text/css">
-
-.swiper-container {
+/*.swiper-container {
 	width:flex;
 	height:flex;
 	border:1px solid white;
@@ -50,28 +49,63 @@
 .swiper-slide {
 	text-align:center;
 	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
-	align-items:center; /* 위아래 기준 중앙정렬 */
-	justify-content:center; /* 좌우 기준 중앙정렬 */
-}
+/*	align-items:center; /* 위아래 기준 중앙정렬 */
+/*	justify-content:center; /* 좌우 기준 중앙정렬 */
+/*}
 .swiper-slide img {
 	box-shadow:0 0 500px #555;
-}
+}*/
+
+html,body { position: relative; height: 100%; }
+body { background: black; margin: 0; padding: 0; }
+.swiper-container {
+	width:flex;
+	height:flex;
+	border:1px solid white;
+	border-radius:7px;
+	box-shadow:0 0 5px #ccc inset;
+	}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background: transparent;
+	border: 2px solid #98FB98; opacity: 1;
+	}
+
+.swiper-pagination-bullet-active {
+	width: 40px;
+	transition: width .5s;
+	border-radius: 5px;
+	background:	#98FB98;
+	border: 1px solid transparent;
+	}
 
 </style>
 
 <!-- 클래스명은 변경하면 안 됨 -->
-<context>
-  <CookieProcessor sameSiteCookies="none"/>
-
 <div class="swiper-container">
 	<div class="swiper-wrapper">
-		<div class="swiper-slide"><iframe style="pointer-events:none;" src="https://dakboard.com/app/screenPredefined?p=2dbf6b32f29b5669c558f497c932c9a5" style="border-width:0" width="1900" height="1030" frameborder="0" scrolling="no"></iframe></div>
 		<div class="swiper-slide">
-			<iframe name="Right" style="pointer-events:none;" width="1900" height="1030" frameborder="0" scrolling="no" src="https://dgeo365-my.sharepoint.com/personal/pkh910518_o365_dge_go_kr/_layouts/15/Doc.aspx?sourcedoc={3f61b74c-5fab-41d5-94f4-2c14598e0de5}&action=embedview&wdAllowInteractivity=False&ActiveCell='%ED%98%84%ED%99%A9%ED%8C%90'!C3&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True" style="border-width:0">
+				<iframe name="ifr" style="pointer-events:none;" src="https://dakboard.com/app/screenPredefined?p=2dbf6b32f29b5669c558f497c932c9a5" style="border-width:0" width="1918" height="1040" frameborder="0" scrolling="no"></iframe>
+		</div>
+		<div class="swiper-slide">
+			<iframe name="ifr" style="pointer-events:none;" width="1918" height="1030" frameborder="0" scrolling="no" src="https://dgeo365-my.sharepoint.com/personal/pkh910518_o365_dge_go_kr/_layouts/15/Doc.aspx?sourcedoc={3f61b74c-5fab-41d5-94f4-2c14598e0de5}&action=embedview&wdAllowInteractivity=False&ActiveCell='%ED%98%84%ED%99%A9%ED%8C%90'!C3&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True" style="border-width:0">
 			</iframe>
 		</div>
-		<div class="swiper-slide"><iframe style="pointer-events:none;" src="https://dakboard.com/app/screenPredefined?p=a74cdf3bb5c11d37cc6c5c8a1d91ed94" style="border-width:0" width="1900" height="1030" frameborder="0" scrolling="no"></iframe></div>
-		<div class="swiper-slide"><iframe style="pointer-events:none;" width="1900" height="1030" frameborder="0" scrolling="no" src="https://dgeo365-my.sharepoint.com/personal/pkh910518_o365_dge_go_kr/_layouts/15/Doc.aspx?sourcedoc={51f58f29-a94b-4f60-acd2-fba2c950c7de}&action=embedview&wdAllowInteractivity=False&ActiveCell='Sheet1'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe></div>
+		<div class="swiper-slide"><iframe name="ifr" style="pointer-events:none;" src="https://dakboard.com/app/screenPredefined?p=a74cdf3bb5c11d37cc6c5c8a1d91ed94" style="border-width:0" width="1918" height="1040" frameborder="0" scrolling="no"></iframe></div>
+
+
+		<div class="swiper-slide"><iframe  name="ifr" style="pointer-events:none;" width="1918" height="1030" frameborder="0" scrolling="no" src="https://dgeo365-my.sharepoint.com/personal/pkh910518_o365_dge_go_kr/_layouts/15/Doc.aspx?sourcedoc={51f58f29-a94b-4f60-acd2-fba2c950c7de}&action=embedview&wdAllowInteractivity=False&ActiveCell='Sheet1'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe></div>
+
 		<!--<div class="swiper-slide"><img src="http://oldmidi.cdn3.cafe24.com/p/0288.jpg"></div>-->
 	</div>
 
@@ -82,8 +116,9 @@
 	<!-- 페이징 -->
 	<div class="swiper-pagination"></div>
 </div>
+<!--새로고침 버튼-->
 <div style="float:right;" id="btn_group"><button id="refresh_btn1" onClick="window.location.reload()" style="">새로고침</button></div>
-</context>
+
 <script>
 
 new Swiper('.swiper-container', {
@@ -97,6 +132,8 @@ new Swiper('.swiper-container', {
 		prevEl : '.swiper-button-prev', // 이번 버튼 클래스명
 	},
 });
+
+
 
 </script>
 
