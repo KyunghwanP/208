@@ -90,7 +90,8 @@ body { background: black; margin: 0; padding: 0; }
 	}
 
 </style>
-
+<Context>
+     <CookieProcessor sameSiteCookies="none" />
 <!-- 클래스명은 변경하면 안 됨 -->
 <div class="swiper-container">
 	<div class="swiper-wrapper">
@@ -118,7 +119,7 @@ body { background: black; margin: 0; padding: 0; }
 </div>
 <!--새로고침 버튼-->
 <div style="float:right;" id="btn_group"><button id="refresh_btn1" onClick="window.location.reload()" style="">새로고침</button></div>
-
+	</context>
 <script>
 
 new Swiper('.swiper-container', {
